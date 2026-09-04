@@ -5,7 +5,7 @@
 Syntax:
 
 ```sh
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "C:\AI-test-script\[1.1] Fix.ps1" -DocumentPath "C:\AI-test-script\Phan-2-100-bai-toan-sac-xuat-va-Oxyz-nen-tang.docx" -OutputPath "C:\AI-test-script\Phan-2-100-bai-toan-sac-xuat-va-Oxyz-nen-tang-mathtype.docx"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\admin\Desktop\auto\[1.1] Fix.ps1" -DocumentPath "C:\Users\admin\Desktop\auto\tmp.docx" -OutputPath "C:\Users\admin\Desktop\auto\tmp-mathtype.docx"
 ```
 
 ```sh
