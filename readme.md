@@ -624,7 +624,7 @@ Tool: [`gdrive-videoloader`](FILE\gdrive-videoloadeo.zip).
 Syntax:
 
 ```sh
-powershell -ExecutionPolicy Bypass -File "F:\gia-su\video-driver\gdrive-videoloader-main\gdrive-videoloader-main\run.ps1"
+pwsh -ExecutionPolicy Bypass -File "F:\gia-su\video-driver\gdrive-videoloader-main\gdrive-videoloader-main\run.ps1"
 ```
 
 ```sh
