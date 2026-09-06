@@ -814,3 +814,19 @@ foreach ($url in $urls) {
 
 Write-Host "Hoan tat toan bo $total url. Video da luu tai $outputDir" -ForegroundColor Yellow
 ```
+
+# 3. Tạo gif.
+
+```sh
+# cắt video
+
+ffmpeg -ss 00:00:10.6 -to 00:00:16.5 -i "C:\AI-test-script\video\vid.mp4" -c copy "C:\AI-test-script\video\vid-cut.mp4"
+ffmpeg -ss 00:00:12 -to 00:00:18.5 -i "C:\AI-test-script\video\vid.mp4" -c copy "C:\AI-test-script\video\vid-cut.mp4"
+
+
+# tạo gif
+
+ffmpeg -i "C:\AI-test-script\video\vid-cut.mp4" -vf "fps=40,scale=1200:-1:flags=lanczos,palettegen=max_colors=256:stats_mode=full" "C:\AI-test-script\video\palette.png"
+ffmpeg -i "C:\AI-test-script\video\vid-cut.mp4" -i "C:\AI-test-script\video\palette.png" -filter_complex "fps=40,scale=1200:-1:flags=lanczos[x];[x][1:v]paletteuse=dither=sierra2_4a" "C:\AI-test-script\video\vid.gif"
+
+```
